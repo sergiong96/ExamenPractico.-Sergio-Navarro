@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examen Desarrollo de Interfaces Web</title>
+    <meta name="author" content="Sergio Navarro González">
+    <link rel="stylesheet" href="./static/style.css">
+</head>
+
+<body>
+    <main>
+        <aside id="lateralBar">
+            <img src="https://www.cesurformacion.com/uploads/media/logo-small/09/19-cesur-fp.svg?v=6-0"
+                alt="Logo Cesur">
+            <ul>
+                <li>Listado entradas</li>
+                <li data-target="add">Nueva entrada</li>
+                <li>Clientes</li>
+                <li>Herramientas</li>
+            </ul>
+            <div></div>
+            <ul>
+                <li>Salir</li>
+            </ul>
+        </aside>
+
+        <section id="tableSection">
+            <h1>Listado de entradas</h1>
+            <table>
+                <thead>
+                    <th>Matrícula</th>
+                    <th>Modelo</th>
+                    <th>Cliente</th>
+                    <th>Fecha de entrada</th>
+                    <th>Fecha de salida</th>
+                    <th>Tarifa</th>
+                    <th>Coste total</th>
+                    <th>Acciones</th>
+                </thead>
+                <tbody>
+
+                    <tr>
+                        <td>ABC123</td>
+                        <td>Toyota Camry</td>
+                        <td>Juan Pérez</td>
+                        <td>2023-01-05</td>
+                        <td>2023-01-10</td>
+                        <td><span>Estándar</span></td>
+                        <td>250€</td>
+                        <td><button type="button">Borrar</button></td>
+                    </tr>
+                    <tr>
+                        <td>XYZ789</td>
+                        <td>Honda Civic</td>
+                        <td>Maria Rodríguez</td>
+                        <td>2023-02-12</td>
+                        <td>2023-02-18</td>
+                        <td><span>Premium</span></td>
+                        <td>280€ </td>
+                        <td><button type="button">Borrar</button></td>
+                    </tr>
+                    <tr>
+                        <td>DEF456</td>
+                        <td>Ford Mustang</td>
+                        <td>Carlos Gómez</td>
+                        <td>2023-03-20</td>
+                        <td>2023-03-25</td>
+                        <td><span>Oferta</span></td>
+                        <td>350€</td>
+                        <td><button type="button">Borrar</button></td>
+                    </tr>
+                    <tr>
+                        <td>GHI789</td>
+                        <td>Chevrolet Malibu</td>
+                        <td>Ana López</td>
+                        <td>2023-04-08</td>
+                        <td>2023-04-15</td>
+                        <td><span>Estándar</span></td>
+                        <td>385€</td>
+                        <td><button type="button">Borrar</button></td>
+                    </tr>
+                    <tr>
+                        <td>JKL012</td>
+                        <td>Nissan Altima</td>
+                        <td> Luis García</td>
+                        <td>2023-05-14</td>
+                        <td>2023-05-20</td>
+                        <td><span>Premium</span></td>
+                        <td>270€</td>
+                        <td><button type="button">Borrar</button></td>
+                    </tr>
+                    <tr>
+                        <td>MNO345</td>
+                        <td> Hyundai Sonata</td>
+                        <td>Sofía Martinez</td>
+                        <td>2023-06-02</td>
+                        <td>2023-06-08</td>
+                        <td><span>Estándar</span></td>
+                        <td>288€</td>
+                        <td><button type="button">Borrar</button></td>
+                    </tr>
+                    <tr>
+                        <td>PQR678</td>
+                        <td>Kia Forte</td>
+                        <td>Pedro Sánchez</td>
+                        <td> 2023-07-11</td>
+                        <td>2023-07-18</td>
+                        <td><span>Oferta</span></td>
+                        <td>294€</td>
+                        <td><button type="button">Borrar</button></td>
+                    </tr>
+                    <tr>
+                        <td>STU901</td>
+                        <td>Subaru Outback</td>
+                        <td>Marta Torres</td>
+                        <td>2023-08-19</td>
+                        <td>2023-08-25</td>
+                        <td><span>Premium</span></td>
+                        <td>360€</td>
+                        <td><button type="button">Borrar</button></td>
+                    </tr>
+                    <tr>
+                        <td>VWX234</td>
+                        <td>Mercedes-Benz C-Class</td>
+                        <td>Ricardo Vargas</td>
+                        <td>2023-09-27</td>
+                        <td> 2023-10-03</td>
+                        <td><span>Estándar</span></td>
+                        <td>480€</td>
+                        <td><button type="button">Borrar</button></td>
+                    </tr>
+                    <tr>
+                        <td>YZA567</td>
+                        <td>Audi A4</td>
+                        <td>Isabel López</td>
+                        <td>2023-11-05</td>
+                        <td>2023-11-12</td>
+                        <td><span>Oferta</span></td>
+                        <td>525€</td>
+                        <td><button type="button">Borrar</button></td>
+                    </tr>
+                </tbody>
+            </table>
+
+
+            <dialog id="addDialog">
+                <p>Insertar nuevo coche</p>
+                <div>
+                    <form method="dialog">
+                        <div>
+                            <label for="matr">Matrícula</label>
+                            <input type="text" name="matricula" id="matr" required>
+                        </div>
+                        <div>
+                            <label for="mod">Modelo</label>
+                            <input type="text" name="modelo" id="mod" required>
+                        </div>
+                        <div>
+                            <label for="clie">Cliente</label>
+                            <input type="text" name="cliente" id="clie" required>
+                        </div>
+                        <div>
+                            <label for="entr">Entrada</label>
+                            <input type="date" name="fechaEntrada" id="entr" required>
+                        </div>
+                        <div>
+                            <label for="sald">Salida</label>
+                            <input type="date" name="fechaSalida" id="sald" required>
+                        </div>
+                        <div>
+                            <label for="tar">Tarifa</label>
+                            <select name="tarifa" id="tar" required>
+                                <option>Estándar</option>
+                                <option>Premium</option>
+                                <option>Oferta</option>
+                            </select>
+                        </div>
+                        <div class="buttons">
+                            <button type="submit" data-action="insertar">Insertar</button>
+                            <button type="button" data-action="cancelar">Cancelar</button>
+                        </div>
+                    </form>
+                </div>
+            </dialog>
+
+
+            <dialog id="deleteDialog">
+                <p>Borrar coche</p>
+                <div>
+                    <form method="dialog">
+                        <p>¿Deseas borrar la entrada seleccionada?</p>
+                        <div>
+                            <button type="submit" data-action="borrar">Borrar</button>
+                            <button type="button" data-action="mantener">Mantener</button>
+                        </div>
+                    </form>
+                </div>
+            </dialog>
+
+
+            <footer>
+                <p>Creado por Sergio Navarro González. 2ºDAW</p>
+            </footer>
+
+        </section>
+
+    </main>
+    <script type="text/javascript" src="./static/app.js"></script>
+</body>
+
+</html>

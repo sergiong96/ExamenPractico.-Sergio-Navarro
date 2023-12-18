@@ -1,0 +1,241 @@
+$azul : #002858;
+$azul2 : #002858aa;
+$amarillo: #ffc836;
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+/* Continuar desde aqui... */
+
+* {
+    font-size: 16px;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 13rem auto;
+    grid-template-rows: auto;
+    border-radius: 0.8rem;
+    overflow: hidden;
+    height: 100vh;
+
+
+    aside#lateralBar {
+        grid-column: 1;
+        display: flex;
+        flex-direction: column;
+        background-color: $azul;
+        color: white;
+        overflow: hidden;
+
+        img {
+            padding: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        ul {
+            list-style-type: none;
+            display: flex;
+            padding: 0;
+            flex-direction: column;
+            margin: 0;
+            gap: 2rem;
+            align-items: center;
+
+            li {
+                padding: 1.2rem;
+                width: 100%;
+                text-align: center;
+                cursor: pointer;
+            }
+
+            li:hover {
+                background-color: $amarillo;
+                color: $azul;
+            }
+        }
+
+        div {
+            height: 2px;
+            background-color: white;
+            margin: 2rem 0;
+        }
+
+    }
+
+
+    section#tableSection {
+        grid-column: 2;
+        background-color: $azul2;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        h1 {
+            font-size: 3rem;
+            color: $amarillo;
+            margin-bottom: 5rem;
+
+        }
+
+        table {
+            border-collapse: collapse;
+            border: 5px solid $amarillo;
+            text-align: center;
+
+            thead {
+                tr {
+                    background-color: $amarillo;
+                    color: $azul;
+                }
+
+                th {
+                    padding: 1rem;
+                }
+            }
+
+            th,
+            td {
+                border: 2px solid $amarillo;
+                padding: 0.5rem 1rem;
+            }
+
+            tbody {
+                tr:hover {
+                    background-color: $amarillo;
+                }
+
+                tr:hover td {
+                    color: $azul;
+                }
+
+                tr:hover span {
+                    border: 2px solid $azul;
+                }
+
+                td {
+                    color: $amarillo;
+
+                    span {
+                        background-color: $amarillo;
+                        border: 2px solid $amarillo;
+                        border-radius: 1rem;
+                        padding: 0.2rem;
+                        font-size: 14px;
+                        color: $azul
+                    }
+
+                    button {
+                        background-color: $amarillo;
+                    }
+                }
+            }
+
+        }
+
+        dialog#addDialog {
+            p {
+                font-size: 1.5rem;
+                color: $azul;
+                text-align: center;
+                font-weight: bold;
+                margin-bottom: 1rem;
+            }
+
+            &>div {
+                padding: 1rem 4rem 1rem 2rem;
+
+
+
+                form>div:not(.buttons) {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 1rem;
+                    margin-bottom: 0.2rem;
+                    padding: 0.5rem 1rem;
+
+                    label {
+                        color: $azul;
+                        width: 8rem;
+                        text-align: end;
+                    }
+
+                    input,
+                    select {
+                        width: 8rem;
+                    }
+
+                    &:hover {
+                        background-color: $amarillo;
+                    }
+                }
+
+                form>div.buttons {
+                    display: flex;
+                    justify-content: center;
+                    gap: 1rem;
+                    margin-top: 2rem;
+
+                    button[type=submit] {
+                        background-color: $amarillo;
+                    }
+                }
+            }
+
+            &::backdrop {
+                background-color: $azul;
+                opacity: 70%;
+            }
+        }
+
+        dialog#deleteDialog {
+            &>p {
+                font-size: 1.5rem;
+                color: $azul;
+                text-align: center;
+                font-weight: bold;
+            }
+
+            form {
+                p {
+                    color: $azul;
+                    text-align: center;
+                    margin: 2rem 0 1rem 0;
+                }
+
+                div {
+                    display: flex;
+                    justify-content: center;
+                    gap: 0.3rem;
+
+                    button[type=submit] {
+                        background-color: $amarillo;
+                    }
+                }
+            }
+
+            &::backdrop {
+                background-color: $azul;
+                opacity: 70%;
+            }
+
+        }
+
+
+        footer {
+            margin-top: 5rem;
+
+            p {
+                color: $amarillo;
+            }
+        }
+
+    }
+
+}

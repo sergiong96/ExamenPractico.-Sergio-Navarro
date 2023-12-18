@@ -1,0 +1,181 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+/* Continuar desde aqui... */
+* {
+  font-size: 16px;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 13rem auto;
+  grid-template-rows: auto;
+  border-radius: 0.8rem;
+  overflow: hidden;
+  height: 100vh;
+}
+main aside#lateralBar {
+  grid-column: 1;
+  display: flex;
+  flex-direction: column;
+  background-color: #002858;
+  color: white;
+  overflow: hidden;
+}
+main aside#lateralBar img {
+  padding: 1rem;
+  margin-bottom: 2rem;
+}
+main aside#lateralBar ul {
+  list-style-type: none;
+  display: flex;
+  padding: 0;
+  flex-direction: column;
+  margin: 0;
+  gap: 2rem;
+  align-items: center;
+}
+main aside#lateralBar ul li {
+  padding: 1.2rem;
+  width: 100%;
+  text-align: center;
+  cursor: pointer;
+}
+main aside#lateralBar ul li:hover {
+  background-color: #ffc836;
+  color: #002858;
+}
+main aside#lateralBar div {
+  height: 2px;
+  background-color: white;
+  margin: 2rem 0;
+}
+main section#tableSection {
+  grid-column: 2;
+  background-color: rgba(0, 40, 88, 0.6666666667);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+main section#tableSection h1 {
+  font-size: 3rem;
+  color: #ffc836;
+  margin-bottom: 5rem;
+}
+main section#tableSection table {
+  border-collapse: collapse;
+  border: 5px solid #ffc836;
+  text-align: center;
+}
+main section#tableSection table thead tr {
+  background-color: #ffc836;
+  color: #002858;
+}
+main section#tableSection table thead th {
+  padding: 1rem;
+}
+main section#tableSection table th,
+main section#tableSection table td {
+  border: 2px solid #ffc836;
+  padding: 0.5rem 1rem;
+}
+main section#tableSection table tbody tr:hover {
+  background-color: #ffc836;
+}
+main section#tableSection table tbody tr:hover td {
+  color: #002858;
+}
+main section#tableSection table tbody tr:hover span {
+  border: 2px solid #002858;
+}
+main section#tableSection table tbody td {
+  color: #ffc836;
+}
+main section#tableSection table tbody td span {
+  background-color: #ffc836;
+  border: 2px solid #ffc836;
+  border-radius: 1rem;
+  padding: 0.2rem;
+  font-size: 14px;
+  color: #002858;
+}
+main section#tableSection table tbody td button {
+  background-color: #ffc836;
+}
+main section#tableSection dialog#addDialog p {
+  font-size: 1.5rem;
+  color: #002858;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+main section#tableSection dialog#addDialog > div {
+  padding: 1rem 4rem 1rem 2rem;
+}
+main section#tableSection dialog#addDialog > div form > div:not(.buttons) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.2rem;
+  padding: 0.5rem 1rem;
+}
+main section#tableSection dialog#addDialog > div form > div:not(.buttons) label {
+  color: #002858;
+  width: 8rem;
+  text-align: end;
+}
+main section#tableSection dialog#addDialog > div form > div:not(.buttons) input,
+main section#tableSection dialog#addDialog > div form > div:not(.buttons) select {
+  width: 8rem;
+}
+main section#tableSection dialog#addDialog > div form > div:not(.buttons):hover {
+  background-color: #ffc836;
+}
+main section#tableSection dialog#addDialog > div form > div.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+main section#tableSection dialog#addDialog > div form > div.buttons button[type=submit] {
+  background-color: #ffc836;
+}
+main section#tableSection dialog#addDialog::backdrop {
+  background-color: #002858;
+  opacity: 70%;
+}
+main section#tableSection dialog#deleteDialog > p {
+  font-size: 1.5rem;
+  color: #002858;
+  text-align: center;
+  font-weight: bold;
+}
+main section#tableSection dialog#deleteDialog form p {
+  color: #002858;
+  text-align: center;
+  margin: 2rem 0 1rem 0;
+}
+main section#tableSection dialog#deleteDialog form div {
+  display: flex;
+  justify-content: center;
+  gap: 0.3rem;
+}
+main section#tableSection dialog#deleteDialog form div button[type=submit] {
+  background-color: #ffc836;
+}
+main section#tableSection dialog#deleteDialog::backdrop {
+  background-color: #002858;
+  opacity: 70%;
+}
+main section#tableSection footer {
+  margin-top: 5rem;
+}
+main section#tableSection footer p {
+  color: #ffc836;
+}/*# sourceMappingURL=style.css.map */
